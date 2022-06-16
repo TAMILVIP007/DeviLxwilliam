@@ -424,7 +424,7 @@ async def is_captcha_on(chat_id: int) -> bool:
     return False
 
 
-async def captcha_off(chat_id: int):
+async def captcha_on(chat_id: int):
     is_captcha = await is_captcha_on(chat_id)
     if is_captcha:
         return
