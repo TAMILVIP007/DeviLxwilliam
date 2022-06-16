@@ -365,7 +365,7 @@ async def _ban_restricted_user_until_date(
 @adminsOnly("can_restrict_members")
 async def captcha_state(_, message):
     usage = "**Usage:**\n/captcha [ENABLE|DISABLE]"
-    if len(message.command) != 1:
+    if len(message.command) != 2:
         await message.reply_text(usage)
         return
     chat_id = message.chat.id
