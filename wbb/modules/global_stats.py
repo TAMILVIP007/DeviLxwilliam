@@ -106,9 +106,7 @@ async def global_stats(_, message):
     url = "https://api.github.com/repos/thehamkercat/williambutcherbot/contributors"
     rurl = "https://github.com/thehamkercat/williambutcherbot"
     developers = await get(url)
-    commits = 0
-    for developer in developers:
-        commits += developer["contributions"]
+    commits = sum(developer["contributions"] for developer in developers)
     developers = len(developers)
 
     # Rss feeds

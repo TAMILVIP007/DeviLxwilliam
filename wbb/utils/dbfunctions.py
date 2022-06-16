@@ -60,15 +60,11 @@ chatbotdb = db.chatbot
 
 
 def obj_to_str(obj):
-    if not obj:
-        return False
-    string = codecs.encode(pickle.dumps(obj), "base64").decode()
-    return string
+    return codecs.encode(pickle.dumps(obj), "base64").decode() if obj else False
 
 
 def str_to_obj(string: str):
-    obj = pickle.loads(codecs.decode(string.encode(), "base64"))
-    return obj
+    return pickle.loads(codecs.decode(string.encode(), "base64"))
 
 
 async def get_notes_count() -> dict:
@@ -189,11 +185,8 @@ async def delete_filter(chat_id: int, name: str) -> bool:
 
 async def int_to_alpha(user_id: int) -> str:
     alphabet = list(ascii_lowercase)[:10]
-    text = ""
     user_id = str(user_id)
-    for i in user_id:
-        text += alphabet[int(i)]
-    return text
+    return "".join(alphabet[int(i)] for i in user_id)
 
 
 async def alpha_to_int(user_id_alphabet: str) -> int:
