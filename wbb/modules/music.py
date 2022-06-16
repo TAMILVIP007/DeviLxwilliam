@@ -72,7 +72,7 @@ def download_youtube_audio(arq_resp):
 
     out_file = audio.download()
     base, _ = os.path.splitext(out_file)
-    audio_file = base + ".mp3"
+    audio_file = f"{base}.mp3"
     os.rename(out_file, audio_file)
 
     return [title, performer, duration, audio_file, thumbnail_file]
@@ -198,7 +198,7 @@ async def lyrics_func(_, message):
     artist = song['artist']
     lyrics = song['lyrics']
     msg = f"**{song_name}** | **{artist}**\n\n__{lyrics}__"
-          
+
     if len(msg) > 4095:
         msg = await paste(msg)
         msg = f"**LYRICS_TOO_LONG:** [URL]({msg})"

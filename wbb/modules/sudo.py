@@ -109,7 +109,7 @@ async def sudoers_list(_, message: Message):
     for user_id in sudoers:
         try:
             user = await app2.get_users(user_id)
-            user = user.first_name if not user.mention else user.mention
+            user = user.mention or user.first_name
             j += 1
         except Exception:
             continue
