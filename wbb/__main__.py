@@ -141,7 +141,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-        f"Hey there! My name is {BOT_NAME}[✨](https://telegra.ph/file/d2178f99282b79d5ca1b0.jpg). I can manage your "
+        f"Hey there! My name is {BOT_NAME}. I can manage your "
         + "group with lots of useful features, feel free to "
         + "add me to your group."
 )
@@ -265,7 +265,7 @@ async def help_parser(name, keyboard=None):
         """Hello {first_name}, My name is {bot_name}[✨](https://telegra.ph/file/ca141ba231e8f7d9686f8.jpg).
 I'm a group management bot with some useful features.
 You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group Or @AttitudeKing_vj.
+Also you can ask anything in Support Group Or @AttitudeKing_vj 
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -304,7 +304,7 @@ async def help_button(client, query):
 Hello {query.from_user.first_name}, My name is {BOT_NAME}[✨](https://telegra.ph/file/ca141ba231e8f7d9686f8.jpg).
 I'm a group management bot with some usefule features.
 You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group Or @AttitudeKing_vj.
+Also you can ask anything in Support Group Or @AttitudeKing_vj 
 
 General command are:
  - /start: Start the bot
