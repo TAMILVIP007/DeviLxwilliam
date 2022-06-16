@@ -70,7 +70,7 @@ async def save_filters(_, message):
             "**Usage:**\n__/filter [FILTER_NAME]__"
         )
     chat_id = message.chat.id
-    _type = "text" if message.reply_to_message.text else "sticker"
+    _type = "text" if message.reply_to_message.text else "sticker" "gif"
     _filter = {
         "type": _type,
         "data": message.reply_to_message.text.markdown
