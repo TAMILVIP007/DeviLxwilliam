@@ -136,7 +136,7 @@ async def welcome(_, message: Message):
             if member.is_bot:
                 continue  # ignore bots
 
-            # Ignore user if he has already solved captcha in this group
+            # Ignore users
             # someday
             if await has_solved_captcha_once(message.chat.id, member.id):
                 continue
