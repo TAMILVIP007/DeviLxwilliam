@@ -141,9 +141,9 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-        f"Hey there! My name is **𝙳ᴇᴠɪʟ✗𝙰ɳɠɛƖ༉࿐**[🧚‍♀️](https://telegra.ph/file/ca141ba231e8f7d9686f8.jpg). I can manage your "
+        f"Hey there! My name is **𝙳ᴇᴠɪʟ✗𝙰ɳɠɛƖ༉࿐**[🧚‍♀️](https://telegra.ph/file/d2178f99282b79d5ca1b0.jpg). I can manage your "
         + "group with lots of useful features, feel free to "
-        + "add me to your group.Also you can ask anything in Support Group Or @AttitudeKing_vj"
+        + "add me to your group. Also you can ask anything in Support Group Or @AttitudeKing_vj"
 )
 
 keyboard = InlineKeyboardMarkup(
